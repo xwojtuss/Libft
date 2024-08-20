@@ -6,7 +6,7 @@
 /*   By: wkornato <wkornato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 10:25:16 by wkornato          #+#    #+#             */
-/*   Updated: 2024/08/20 10:52:55 by wkornato         ###   ########.fr       */
+/*   Updated: 2024/08/20 10:53:15 by wkornato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ double	ft_atof(const char *str)
 {
 	double	result;
 	int		i;
-	int		float_start;
 	bool	is_negative;
 
 	i = 0;
