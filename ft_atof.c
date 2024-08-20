@@ -6,7 +6,7 @@
 /*   By: wkornato <wkornato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 10:25:16 by wkornato          #+#    #+#             */
-/*   Updated: 2024/08/20 11:32:44 by wkornato         ###   ########.fr       */
+/*   Updated: 2024/08/20 11:37:05 by wkornato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ double	ft_atof(const char *str)
 {
 	double	result;
 	int		i;
-	int		offset;
 	bool	is_negative;
 
 	i = 0;
@@ -38,7 +37,6 @@ double	ft_atof(const char *str)
 		return (0);
 	is_negative = (str[0] == '-' && i++ == 0);
 	result = get_part(str, &i);
-	offset = i - 1;
 	if (str[i] == 'e' || str[i] == 'E')
 	{
 		i++;
@@ -47,7 +45,7 @@ double	ft_atof(const char *str)
 	if (!str[i] || str[i] != '.')
 		return (result * (!is_negative * 2 - 1));
 	i++;
-	result += (double)get_part(str, &i) / ft_pow(10, i - offset - (int)is_negative);
+	result += (double)get_part(str, &i) / ft_pow(10, ft_intlen_d(ft_atoi(str + i)));
 	if (str[i] == 'e' || str[i] == 'E')
 	{
 		i++;

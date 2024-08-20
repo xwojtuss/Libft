@@ -6,7 +6,7 @@
 /*   By: wkornato <wkornato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 13:52:16 by wkornato          #+#    #+#             */
-/*   Updated: 2024/08/20 11:26:58 by wkornato         ###   ########.fr       */
+/*   Updated: 2024/08/20 11:36:18 by wkornato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,9 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-long double				ft_pow(double x, int y);
+long double			ft_pow(double x, int y);
+int					ft_intlen_d(int n);
+int					ft_intlen(int n);
 
 size_t				ft_arrlen(char **arr);
 
