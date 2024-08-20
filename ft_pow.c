@@ -6,7 +6,7 @@
 /*   By: wkornato <wkornato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 10:46:26 by wkornato          #+#    #+#             */
-/*   Updated: 2024/08/20 10:47:39 by wkornato         ###   ########.fr       */
+/*   Updated: 2024/08/20 11:05:08 by wkornato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ double	ft_pow(double x, int y)
 	{
 		res *= x;
 		y--;
+	}
+	while (y < 0)
+	{
+		res /= x;
+		y++;
 	}
 	return (res);
 }
