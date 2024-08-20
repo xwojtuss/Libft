@@ -6,7 +6,7 @@
 /*   By: wkornato <wkornato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 10:25:16 by wkornato          #+#    #+#             */
-/*   Updated: 2024/08/20 11:14:52 by wkornato         ###   ########.fr       */
+/*   Updated: 2024/08/20 11:20:23 by wkornato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ double	ft_atof(const char *str)
 	if (str[i] == 'e' || str[i] == 'E')
 	{
 		i++;
-		result *= ft_pow(10, get_part(str, &i));
+		result *= ft_pow(10, ft_atoi(str + i));
 	}
 	return (result * (!is_negative * 2 - 1));
 }
