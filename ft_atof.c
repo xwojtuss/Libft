@@ -6,7 +6,7 @@
 /*   By: wkornato <wkornato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 10:25:16 by wkornato          #+#    #+#             */
-/*   Updated: 2024/08/20 11:12:18 by wkornato         ###   ########.fr       */
+/*   Updated: 2024/08/20 11:13:49 by wkornato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ double	ft_atof(const char *str)
 	if (!str)
 		return (0);
 	is_negative = (str[0] == '-' && i++ == 0);
-	result = get_part(str, &i);
+	result = get_part(str, &i) * (!is_negative * 2 - 1);
 	if (!str[i] || str[i] != '.')
 		return (result);
 	i++;
@@ -46,7 +46,5 @@ double	ft_atof(const char *str)
 		i++;
 		result *= ft_pow(10, get_part(str, &i));
 	}
-	if (is_negative)
-		result *= -1;
 	return (result);
 }
