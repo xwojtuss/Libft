@@ -6,7 +6,7 @@
 /*   By: wkornato <wkornato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 13:52:16 by wkornato          #+#    #+#             */
-/*   Updated: 2024/08/20 10:03:57 by wkornato         ###   ########.fr       */
+/*   Updated: 2024/08/20 10:44:56 by wkornato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <fcntl.h>
 # include <limits.h>
 # include <stdarg.h>
+# include <stdbool.h>
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -57,6 +58,7 @@ char				*ft_strnstr(const char *big, const char *little,
 void				*ft_memcpy(void *dest, const void *src, size_t n);
 int					ft_atoi(const char *str);
 long int			ft_atoi_long(const char *str);
+double				ft_atof(const char *str);
 void				*ft_memmove(void *dest, const void *src, size_t count);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dest, const char *src, unsigned int size);

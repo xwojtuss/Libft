@@ -8,7 +8,7 @@ LIB_SRCS = ft_isalpha.c ft_toupper.c ft_isdigit.c ft_tolower.c ft_isalnum.c ft_s
 		ft_strdup.c ft_strndup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putstr_fd.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 		get_next_line.c ft_put.c ft_putptr.c ft_printf.c ft_strcmp.c ft_strcpy.c ft_strtok_r.c ft_strcspn.c ft_strspn.c \
 		ft_strcat.c ft_iswhite.c ft_max.c ft_min.c ft_abs.c ft_strjoin_array_delim.c ft_strjoin_array.c ft_fallback_string.c \
-		ft_strjoin_delim.c ft_arrlen.c \
+		ft_strjoin_delim.c ft_arrlen.c ft_atof.c \
 		ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstmap.c ft_lstiter.c
 
 LIB_OBJECTS = ${LIB_SRCS:.c=.o}
