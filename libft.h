@@ -86,6 +86,7 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 long double			ft_pow(double x, int y);
+int					ft_topow2(int val);
 int					ft_intlen_d(int n);
 int					ft_intlen(int n);
 
