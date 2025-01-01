@@ -6,7 +6,7 @@
 /*   By: wkornato <wkornato@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/01 19:09:11 by wkornato          #+#    #+#             */
-/*   Updated: 2025/01/01 19:14:51 by wkornato         ###   ########.fr       */
+/*   Updated: 2025/01/01 19:33:00 by wkornato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ bool	ft_itoa_buf(int num, char *buf, size_t size)
 {
 	int			is_negative;
 	long int	number;
-	char		*result;
 	size_t		count;
 
 	is_negative = (num <= 0);
@@ -41,9 +40,9 @@ bool	ft_itoa_buf(int num, char *buf, size_t size)
 		number /= 10;
 		count++;
 	}
-	if (count + is_negative >= size)
+	if (count >= size)
 		return (false);
-	prepare_result(num, result, count);
+	prepare_result(num, buf, count);
 	number = num;
 	number *= (!is_negative * 2 - 1);
 	while (number != 0)
@@ -51,5 +50,5 @@ bool	ft_itoa_buf(int num, char *buf, size_t size)
 		buf[--count] = (number % 10) + '0';
 		number /= 10;
 	}
-	return (result);
+	return (true);
 }
